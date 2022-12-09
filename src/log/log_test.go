@@ -74,12 +74,14 @@ func testPrint(t *testing.T, flag int, prefix string, pattern string, useFormat 
 	SetOutput(os.Stderr)
 }
 
+//TODO 不知道这个是干啥的
 func TestDefault(t *testing.T) {
 	if got := Default(); got != std {
 		t.Errorf("Default [%p] should be std [%p]", got, std)
 	}
 }
 
+//
 func TestAll(t *testing.T) {
 	for _, testcase := range tests {
 		testPrint(t, testcase.flag, testcase.prefix, testcase.pattern, false)

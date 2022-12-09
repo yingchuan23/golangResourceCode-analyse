@@ -52,8 +52,8 @@ const (
 type Logger struct {
 	mu     sync.Mutex // ensures atomic writes; protects the following fields
 	prefix string     // prefix on each line to identify the logger (but see Lmsgprefix)
-	flag   int        // properties
-	out    io.Writer  // destination for output
+	flag   int        // properties															//不知道这个flag到底是啥
+	out    io.Writer  // destination for output  											//设置输出的位置
 	buf    []byte     // for accumulating text to write
 }
 
@@ -276,6 +276,8 @@ func (l *Logger) Writer() io.Writer {
 }
 
 // SetOutput sets the output destination for the standard logger.
+//TODO 参数是设置日志输出的文件位置
+// log.SetOutput(io.MultiWriter(os.Stdout, f)) 也可以使用io.MultiWriter 同时写到指定文件和输出到board
 func SetOutput(w io.Writer) {
 	std.mu.Lock()
 	defer std.mu.Unlock()
@@ -300,6 +302,7 @@ func Prefix() string {
 }
 
 // SetPrefix sets the output prefix for the standard logger.
+//TODO 设置一下 log的前缀
 func SetPrefix(prefix string) {
 	std.SetPrefix(prefix)
 }
