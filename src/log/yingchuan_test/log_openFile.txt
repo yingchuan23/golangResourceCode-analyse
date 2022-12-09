@@ -1,0 +1,1 @@
+RDS Service status ====> 2022/12/09 23:31:56.878264 /Users/chenyingchuan/mycode/temporarycode/go/src/log/yingchuan_test/yingchuan_test.go:80: 用 os.openFile 函数 打开文件并写入日志
