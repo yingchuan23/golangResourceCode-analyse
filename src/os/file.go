@@ -42,11 +42,11 @@ package os
 
 import (
 	"errors"
-	"internal/poll"
-	"internal/testlog"
 	"io"
 	"io/fs"
 	"runtime"
+	"std/internal/poll"
+	"std/internal/testlog"
 	"syscall"
 	"time"
 )
@@ -69,6 +69,7 @@ var (
 // Flags to OpenFile wrapping those of the underlying system. Not all
 // flags may be implemented on a given system.
 const (
+	// read write  | open and write
 	// Exactly one of O_RDONLY, O_WRONLY, or O_RDWR must be specified.
 	O_RDONLY int = syscall.O_RDONLY // open the file read-only.
 	O_WRONLY int = syscall.O_WRONLY // open the file write-only.
