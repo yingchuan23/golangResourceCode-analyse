@@ -188,7 +188,7 @@ of the run-time system.
 */
 package runtime
 
-import "runtime/internal/sys"
+import "std/runtime/internal/sys"
 
 // Caller reports file and line number information about function invocations on
 // the calling goroutine's stack. The argument skip is the number of stack frames

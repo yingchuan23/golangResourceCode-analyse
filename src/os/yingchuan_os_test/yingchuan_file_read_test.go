@@ -81,5 +81,6 @@ func TestFile_yingchuan_read3(t *testing.T) {
 		content = append(content, receiveByteSliceBuf...)
 	}
 	fmt.Printf("读取文件 %v 结束。。。 文件内容如下：\n", file.Name())
+
 	fmt.Println(string(content))
 }

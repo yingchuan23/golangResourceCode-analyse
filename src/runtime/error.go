@@ -4,7 +4,7 @@
 
 package runtime
 
-import "internal/bytealg"
+import "std/internal/bytealg"
 
 // The Error interface identifies a run time error.
 type Error interface {
