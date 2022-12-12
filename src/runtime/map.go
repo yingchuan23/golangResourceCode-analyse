@@ -54,9 +54,9 @@ package runtime
 // before the table grows. Typical tables will be somewhat less loaded.
 
 import (
-	"runtime/internal/atomic"
-	"runtime/internal/math"
-	"runtime/internal/sys"
+	"std/runtime/internal/atomic"
+	"std/runtime/internal/math"
+	"std/runtime/internal/sys"
 	"unsafe"
 )
 

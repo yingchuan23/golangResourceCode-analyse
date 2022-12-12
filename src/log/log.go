@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"io"
 	"os"
-	"runtime"
+	"std/runtime"
 	"sync"
 	"time"
 )
